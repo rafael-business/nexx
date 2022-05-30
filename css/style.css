@@ -28,6 +28,18 @@ body {
   color: #4b4b4b;
   -webkit-font-smoothing: antialiased;
 }
+body::before {
+  content: "";
+  position: absolute;
+  top: 175px;
+  left: -300px;
+  width: 100%;
+  height: 1200px;
+  opacity: .05;
+  z-index: -1;
+  background: url(../i/bg-wp-construct.png) no-repeat;
+  background-size: contain;
+}
 body.dev {
   background: #ccc;
   min-height: 10000px;
@@ -4970,4 +4982,21 @@ b, strong {
   .application_26 img {
     max-height: 80vh;
   }
+}
+
+
+
+#servicos h2 em {
+  opacity: .3;
+  font-weight: 100;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+footer {
+  background-image: url(../i/footer.png);
+  background-size: cover;
+}
+
+.grad-white {
+  background: linear-gradient(180deg, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 100%);
 }

@@ -41,7 +41,8 @@ $sendInBlueListIDs = array(); // IDs of lists to add contact to; separate by com
 $hubSpotAPIkey = '';
 // Google ReCaptcha "secret". Please, get it on https://www.google.com/recaptcha/admin/create
 //(leave string empty if you don't want to use gReCaptcha in your forms; learn more about gReCaptcha integration: https://designmodo.com/startup/documentation/#grecaptcha)
-$gRecaptchaSecret = '6LcmMEcgAAAAAJ2nUjhZx6liKkXhDzdbkd20Nxfi';
+	//6LcmMEcgAAAAAJ2nUjhZx6liKkXhDzdbkd20Nxfi
+$gRecaptchaSecret = '';
 
 /* END OF SETTINGS */
 

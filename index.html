@@ -22,8 +22,6 @@
 		<link href="css/style.css" rel="stylesheet" />
 		<!-- jQuery 3.3.1 -->
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-
-		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 	</head> 
 	<body>
 <!-- Navigation Mobile type 1 -->
@@ -322,7 +320,7 @@
 		<section class="pt-80 pb-100 bg-light text-center contact_2" id="contato">
 			<div class="container px-xl-0">
 				<div id="response"></div>
-				<form action="https://codash.inexxus.digital/crm/forms/wtl/b1813e6dd9b3102e8e90d17d7d8a7bc2" id="b1813e6dd9b3102e8e90d17d7d8a7bc2" class="disable-on-submit SFG" enctype="multipart/form-data" method="post" accept-charset="utf-8" novalidate="novalidate" _lpchecked="1">
+				<form action="https://codash.inexxus.digital/crm/forms/wtl/b1813e6dd9b3102e8e90d17d7d8a7bc2" id="b1813e6dd9b3102e8e90d17d7d8a7bc2" class="disable-on-submit" enctype="multipart/form-data" method="post" accept-charset="utf-8" novalidate="novalidate" _lpchecked="1">
 					<input type="hidden" name="csrf_token_name" value="6a3e37072809496ef4af2e0b72a8fe9a"> 
 					<input type="hidden" name="key" value="b1813e6dd9b3102e8e90d17d7d8a7bc2">
 					<div class="row justify-content-center">
@@ -340,7 +338,6 @@
 						<div class="col-xl-4 col-lg-5 col-md-6 col-sm-7">
 							<input type="email" name="email" placeholder="Seu e-mail" required="required" class="input mb-30 w-full lg border-gray focus-action-1 color-heading placeholder-heading text-center text-sm-left" />
 						</div>
-						<div id="g-recaptcha" data-sitekey="AIzaSyBsqc39hSY2tfNu7FXT9NSW-uGzvnQYUpM"></div>
 						<div class="col-xl-2 col-lg-3 col-md-4 col-sm-5">
 							<button class="btn mb-30 lg w-full action-1">Enviar</button>
 						</div>
@@ -441,9 +438,9 @@
 			<div class="w-full h-full d-flex justify-content-center align-items-center">
 				<div id="g-recaptcha" data-sitekey="PUT_YOUR_SITE_KEY_HERE"></div>
 			</div>
-		</div>-->
-		
-
+		</div>
+		<script src="https://www.google.com/recaptcha/api.js?render=explicit" async defer></script>
+		-->
 		<!-- Bootstrap 4.3.1 JS -->
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 		
@@ -459,7 +456,14 @@
 		<!-- AOS 2.3.4 jQuery plugin JS (Animations) -->
 		<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
-
+		<script src="https://www.google.com/recaptcha/enterprise.js?render=6LcmMEcgAAAAAJ2nUjhZx6liKkXhDzdbkd20Nxfi"></script>
+		<script>
+		grecaptcha.enterprise.ready(function() {
+			grecaptcha.enterprise.execute('6LcmMEcgAAAAAJ2nUjhZx6liKkXhDzdbkd20Nxfi', {action: 'login'}).then(function(token) {
+				console.log('ok');
+			});
+		});
+		</script>
 
 		<!-- Maskedinput jQuery plugin JS (Masks for input fields) -->
 		<script src="js/jquery.maskedinput.min.js"></script>
